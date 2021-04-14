@@ -23,6 +23,19 @@ int main() {
     char a3 = "C++"; // null added automatically
     const char a4[6] = "Daniel"; // error: no space for the null!
 
+    // Operations
+    // Same as Strings & Vectors
+
+    // Obtain first and last element
+    int ia[] = {0,1,2,3,4,5};
+    int *beg = begin(ia);  // Points to first element of the array
+    int *last = end(ia);  // Points to last element of the array
+
+    constexpr size_t sz = 5;
+    int arr[sz] = {1,2,3,4,5};
+    int *ip = arr; // equivalent to int *ip = &arr[0]
+    int *ip2 = ip + 4; // ip2 points to arr[4], the last element in arr
+
     // You can´t initialize an array as a copy of another one
 
     return 0;

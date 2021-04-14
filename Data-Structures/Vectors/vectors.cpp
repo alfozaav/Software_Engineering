@@ -15,6 +15,8 @@ int main() {
     ivec.empty(); // true if is empty;
     ivec.size(); // Number of elements
     ivec2.push_back(3); // adds an element to the end of evec2
+    ivec.clear(); // Delete all elements from a vector
+    ivec.erase(2); // Deletes element in index 2 from vector
 
     //  Iterators
     auto b = ivec.begin(), e = ivec.end(); // First and last element of the vector

@@ -13,6 +13,10 @@ int main() {
     cout << numbers[0][1] << endl;
     //  Funcion que imprima la diagonal de una mtriz
 
+    // assigns the first element of arr to ghe last row of ia
+    ia[2][3] = arr[0][0][0];
+    int (&row)[4] = ia[1]; // binds row to the second four-element array in ia
+
     return 0;
 }
 

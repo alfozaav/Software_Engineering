@@ -40,5 +40,8 @@ int main() {
         c = toupper(c);  // assigment chanfes the char in s3
     cout << s << endl;
 
+    // Point to beginning of a string without using C-Style chars
+    const char *str = s.c_str();
+
     return 0;
 }
