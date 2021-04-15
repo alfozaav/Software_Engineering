@@ -3,28 +3,33 @@
 #include <vector>
 
 using namespace std;
+vector<int> fillVector();
 vector<int> finalPrices(vector<int>& prices);
 void printVector(vector<int>& arrPrint);
 
 int main() {
-    int n, c;
-    vector<int> prices;
+    vector<int> prices = fillVector();;
 
+    finalPrices(prices);
+
+    return 0;
+}
+
+vector<int> fillVector() {
+    int n, c;
+    vector<int> filled;
     cout << "How many items you´ll pass?" << endl;
     cin >> n;
 
     cout << "Please enter " << n << "numbers to fill vector!" << endl;
     for ( int i = 0; i < n; i++) {
         cin >> c;
-        prices.push_back(c);
+        filled.push_back(c);
     }
-    printVector(prices);
+    printVector(filled);
 
     cout << "Vector filled!" << endl;
-
-    finalPrices(prices);
-
-    return 0;
+    return filled;
 }
 
 vector<int> finalPrices(vector<int>& prices) {
@@ -39,7 +44,7 @@ vector<int> finalPrices(vector<int>& prices) {
             }
         }
     }
-
+    cout << "The result is:" << endl;
     printVector(res);
     return res;
 }
